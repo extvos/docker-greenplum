@@ -19,6 +19,6 @@ echo "STARTED"
 
 #trap
 while [ "$END" == '' ]; do
-			sleep 1
-			trap "MASTER_DATA_DIRECTORY=/data/master/$SEG_PREFIX-1/ gpstop -M immediate && END=1" INT TERM
+	sleep 1
+	trap "MASTER_DATA_DIRECTORY=/data/master/$SEG_PREFIX-1/ gpstop -M immediate && END=1" INT TERM
 done
